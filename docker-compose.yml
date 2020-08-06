@@ -1,0 +1,13 @@
+version: '3'
+services:
+  config-server:
+    image: config-server
+    ports:
+      - 8800:8800
+  mysqltest:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=Pa55worm#
+      - MYSQL_DATABASE=batch_schema
